@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="apd"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-22 11:30:08 AM"/>
+        <attribute name="created" value="QVNVUztERVNLVE9QLTBPOEQzOUI7MjAyNS0wOS0yMTsxMDo0MDozMyBQTTsyNjAw"/>
+        <attribute name="edited" value="QVNVUztERVNLVE9QLTBPOEQzOUI7MjAyNS0wOS0yMjsxMTozMDowOCBBTTsyOzI2OTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, nim" type="String" array="False" size=""/>
+            <declare name="harga" type="Integer" array="False" size=""/>
+            <declare name="diskonAcer, akhirAcer, diskonAsus, akhirAsus, diskonLenovo, akhirLenovo" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan Nama Lengkap: &quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;Masukkan NIM: &quot;" newline="True"/>
+            <input variable="nim"/>
+            <output expression="&quot;Masukkan Harga Laptop: &quot;" newline="True"/>
+            <input variable="harga"/>
+            <assign variable="diskonAcer" expression="harga * 0.05"/>
+            <assign variable="akhirAcer" expression="harga - diskonAcer"/>
+            <assign variable="diskonAsus" expression="harga * 0.07"/>
+            <assign variable="akhirAsus" expression="harga - diskonAsus"/>
+            <assign variable="diskonLenovo" expression="harga * 0.10"/>
+            <assign variable="akhirLenovo" expression="harga - diskonLenovo"/>
+            <output expression="nama &amp; &quot; dengan NIM &quot; &amp; nim &amp; &quot; ingin membeli laptop seharga Rp &quot; &amp; harga" newline="True"/>
+            <output expression="&quot;Jika membeli Laptop Acer, harga setelah diskon 5%: Rp &quot; &amp; akhirAcer" newline="True"/>
+            <output expression="&quot;Jika membeli Laptop Asus, harga setelah diskon 7%: Rp &quot; &amp; akhirAsus" newline="True"/>
+            <output expression="&quot;Jika membeli Laptop Lenovo, harga setelah diskon 10%: Rp &quot; &amp; akhirLenovo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

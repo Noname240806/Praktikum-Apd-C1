@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2509106091_MuhamadAkbarPratama"/>
+        <attribute name="authors" value="muham"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-28 10:47:31 AM"/>
+        <attribute name="created" value="bXVoYW07QUtCQVI7MjAyNS0wOS0yNzswNDoyNDozMSBQTTsyMTc0"/>
+        <attribute name="edited" value="bXVoYW07QUtCQVI7MjAyNS0wOS0yNzswNjowMzo0MyBQTTsxO211aGFtO0FLQkFSOzIwMjUtMDktMjc7MDQ6NDg6MDQgUE07Zmxvd2NoYXJ0X2xhbmdnYW5hbl9tdXNpa1sxXS5mcHJnOzc5NDA="/>
+        <attribute name="edited" value="bXVoYW07QUtCQVI7MjAyNS0wOS0yODsxMDo0NzozMSBBTTszOzIyNzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nama1, Nim1, Nama, NIM, Pilihan, NamaPaket, Fiturnya" type="String" array="False" size=""/>
+            <assign variable="Nama1" expression="&quot;Akbar Pratama&quot;"/>
+            <assign variable="NIM1" expression="&quot;2509106091&quot;"/>
+            <declare name="TotalBayar, BiayaAdmin" type="Real" array="False" size=""/>
+            <declare name="BiayaLangganan" type="Integer" array="False" size=""/>
+            <assign variable="BiayaLangganan" expression="1500000"/>
+            <output expression="&quot;Masukkan Nama&quot;" newline="True"/>
+            <input variable="Nama"/>
+            <output expression="&quot;Masukkan NIM&quot;" newline="True"/>
+            <input variable="NIM"/>
+            <if expression="Nama=Nama1 &amp;&amp; NIM=NIM1">
+                <then>
+                    <output expression="&quot;Login Berhasil&quot;" newline="True"/>
+                    <output expression="&quot;1. Bronze: Biaya administrasi (1%)&quot;" newline="True"/>
+                    <output expression="&quot;2. Silver: Biaya administrasi (3%)&quot;" newline="True"/>
+                    <output expression="&quot;3. Gold: Biaya administrasi (5%)&quot;" newline="True"/>
+                    <output expression="&quot;4. Platinum: Biaya administrasi (7%)&quot;" newline="True"/>
+                    <output expression="&quot;Pilih paketnya&quot;" newline="True"/>
+                    <input variable="Pilihan"/>
+                    <if expression="Pilihan =&quot;1&quot;">
+                        <then>
+                            <assign variable="NamaPaket" expression="&quot;Bronze&quot;"/>
+                            <output expression="&quot;Paket:&quot; &amp; NamaPaket" newline="True"/>
+                            <assign variable="BiayaAdmin" expression="0.01"/>
+                            <assign variable="Fiturnya" expression="&quot;akses dasar ke lagu-lagu populer&quot;"/>
+                            <output expression="&quot;Fitur:&quot; &amp; Fiturnya" newline="True"/>
+                            <assign variable="TotalBayar" expression="BiayaLangganan + (BiayaLangganan * BiayaAdmin)"/>
+                            <output expression="&quot;Total Bayarnya Rp&quot; &amp; TotalBayar" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="Pilihan =&quot;2&quot;">
+                        <then>
+                            <assign variable="NamaPaket" expression="&quot;Silver&quot;"/>
+                            <output expression="&quot;Paket:&quot; &amp; NamaPaket" newline="True"/>
+                            <assign variable="BiayaAdmin" expression="0.03"/>
+                            <assign variable="Fiturnya" expression="&quot;akses lagu premium dan playlist kustom&quot;"/>
+                            <output expression="&quot;Fitur:&quot; &amp; Fiturnya" newline="True"/>
+                            <assign variable="TotalBayar" expression="BiayaLangganan + (BiayaLangganan * BiayaAdmin)"/>
+                            <output expression="&quot;Total Bayarnya Rp&quot; &amp; TotalBayar" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="Pilihan =&quot;3&quot;">
+                        <then>
+                            <assign variable="NamaPaket" expression="&quot;Gold&quot;"/>
+                            <output expression="&quot;Paket:&quot; &amp; NamaPaket" newline="True"/>
+                            <assign variable="BiayaAdmin" expression="0.05"/>
+                            <assign variable="Fiturnya" expression="&quot;akses lagu premium, playlist kustom, dan mode offline&quot;"/>
+                            <output expression="&quot;Fitur:&quot; &amp; Fiturnya" newline="True"/>
+                            <assign variable="TotalBayar" expression="BiayaLangganan + (BiayaLangganan * BiayaAdmin)"/>
+                            <output expression="&quot;Total Bayarnya Rp&quot; &amp; TotalBayar" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="Pilihan = &quot;4&quot;">
+                        <then>
+                            <assign variable="NamaPaket" expression="&quot;Platinum&quot;"/>
+                            <output expression="&quot;Paket:&quot; &amp; NamaPaket" newline="True"/>
+                            <assign variable="BiayaAdmin" expression="0.07"/>
+                            <assign variable="Fiturnya" expression="&quot;akses semua fitur, playlist kustom, mode offline, dan konten eksklusif artis&quot;"/>
+                            <output expression="&quot;Fitur:&quot; &amp; Fiturnya" newline="True"/>
+                            <assign variable="TotalBayar" expression="BiayaLangganan + (BiayaLangganan * BiayaAdmin)"/>
+                            <output expression="&quot;Total Bayarnya Rp&quot; &amp; TotalBayar" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Login Gagal! Nama &amp; NIM Salah&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
